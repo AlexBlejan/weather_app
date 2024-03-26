@@ -7,6 +7,102 @@
 		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
+		<div class="page-container">
+			<div class="sidebar">
+				<form id="cityForm" class="city-form">
+					<label for="city">Introduceti orasul</label>
+					<input
+						id="city"
+						type="text"
+						placeholder="Pitesti, Bucuresti, Constanta"
+						required
+					/>
+					<button class="btn btn-search">Cauta</button>
+				</form>
+				<div class="separator">
+					<san class="separator-text">sau</san>
+				</div>
+				<button id="location-btn" class="btn btn-location">
+					Foloseste locata curenta
+				</button>
+			</div>
+			<div class="page-content">
+				<div>
+					<h2>Vremea in Bucuresti astazi</h2>
+					<div class="weather-panel today">
+						<div class="weather-details">
+							<p class="date">2024-02-29, 16:00</p>
+							<p>Temperatura:10.7°C</p>
+							<p>Vant:9.8 km/h</p>
+							<p>Umiditate:63%</p>
+						</div>
+						<div>
+							<img src="weather-icons/cloudy.svg" alt="weather-icon" />
+						</div>
+					</div>
+				</div>
+				<div>
+					<h2>Vremea in Bucuresti in urmatoarele zile</h2>
+					<div class="weather-items">
+						<div class="weather-panel forecast">
+							<div class="weather-details">
+								<p class="date">2024-02-29, 16:00</p>
+								<p>Temperatura:10.7°C</p>
+								<p>Vant:9.8 km/h</p>
+								<p>Umiditate:63%</p>
+							</div>
+							<div>
+								<img src="weather-icons/cloudy.svg" alt="weather-icon" />
+							</div>
+						</div>
+						<div class="weather-panel forecast">
+							<div class="weather-details">
+								<p class="date">2024-02-29, 16:00</p>
+								<p>Temperatura:10.7°C</p>
+								<p>Vant:9.8 km/h</p>
+								<p>Umiditate:63%</p>
+							</div>
+							<div>
+								<img src="weather-icons/cloudy.svg" alt="weather-icon" />
+							</div>
+						</div>
+						<div class="weather-panel forecast">
+							<div class="weather-details">
+								<p class="date">2024-02-29, 16:00</p>
+								<p>Temperatura:10.7°C</p>
+								<p>Vant:9.8 km/h</p>
+								<p>Umiditate:63%</p>
+							</div>
+							<div>
+								<img src="weather-icons/cloudy.svg" alt="weather-icon" />
+							</div>
+						</div>
+						<div class="weather-panel forecast">
+							<div class="weather-details">
+								<p class="date">2024-02-29, 16:00</p>
+								<p>Temperatura:10.7°C</p>
+								<p>Vant:9.8 km/h</p>
+								<p>Umiditate:63%</p>
+							</div>
+							<div>
+								<img src="weather-icons/cloudy.svg" alt="weather-icon" />
+							</div>
+						</div>
+						<div class="weather-panel forecast">
+							<div class="weather-details">
+								<p class="date">2024-02-29, 16:00</p>
+								<p>Temperatura:10.7°C</p>
+								<p>Vant:9.8 km/h</p>
+								<p>Umiditate:63%</p>
+							</div>
+							<div>
+								<img src="weather-icons/cloudy.svg" alt="weather-icon" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<script src="./script.js"></script>
 	</body>
 </html>
