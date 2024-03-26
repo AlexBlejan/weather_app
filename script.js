@@ -4,7 +4,7 @@ const cityForm = document.querySelector(`#cityForm`);
 
 cityForm.addEventListener(`submit`, onCityFormSubmit);
 
-function onCityFormSubmit(event) {
+async function onCityFormSubmit(event) {
 	event.preventDefault();
 
 	const cityInput = cityForm.querySelector(`#city`);
@@ -14,5 +14,27 @@ function onCityFormSubmit(event) {
 		alert(`Introduceti numele unui oras`);
 		return;
 	}
-	console.log(cityName);
+
+	const cityCoordinates = await getCityCoordinates(cityName);
+	console.log(cityCoordinates);
+}
+
+async function getCityCoordinates(cityName) {
+	const apiUrl = new URL(API_GEOLOCATION_URL);
+	apiUrl.searchParams.append(`name`, cityName);
+	apiUrl.searchParams.append(`count`, 1);
+
+	console.log(apiUrl.toString());
+
+	const response = await fetch(apiUrl.toString());
+	const data = await response.json();
+
+	if (!data || !data.hasOwnProperty(`results`)) {
+		return null;
+	}
+
+	const result = data.results[0];
+	return { lat: result.latitude, long: result.longitude };
+
+	console.log(data);
 }
