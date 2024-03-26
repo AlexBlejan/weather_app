@@ -1,3 +1,5 @@
+const API_GEOLOCATION_URL = "https://geocoding-api.open-meteo.com/v1/search";
+
 const cityForm = document.querySelector(`#cityForm`);
 
 cityForm.addEventListener(`submit`, onCityFormSubmit);
